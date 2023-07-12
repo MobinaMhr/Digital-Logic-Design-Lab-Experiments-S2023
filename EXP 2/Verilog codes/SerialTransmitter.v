@@ -1,5 +1,3 @@
-`timescale 1ns/1ns
-
 module SerialTransmitter(clk, rst, clkPB, serIn, seg0, seg1, serOut, serOutValid);
         input clk, rst, clkPB, serIn;
         output [6:0] seg0, seg1;

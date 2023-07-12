@@ -16,10 +16,7 @@ module WaveformGenratorTB();
 		#10000 sel = 3'b010;
 
 		#10000 $stop;
-	
 	end
-
-
 endmodule
 
 	

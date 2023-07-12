@@ -1,5 +1,3 @@
-`timescale 1ns/1ns
-
 module AmplitudeSelector(dataIn, selector, dataOut);
 	input [7:0] dataIn;
 	input [1:0] selector;

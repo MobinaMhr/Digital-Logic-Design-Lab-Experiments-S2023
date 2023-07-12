@@ -1,9 +1,8 @@
-`timescale 1ns/1ns
-
 module OnePulser(clk, rst, longPulse, singlePulse);
+        
         input clk, rst, longPulse;
-        output singlePulse;
-        reg singlePulse;
+        output reg singlePulse;
+
         reg generated;
 
         always @(posedge clk, posedge rst) begin

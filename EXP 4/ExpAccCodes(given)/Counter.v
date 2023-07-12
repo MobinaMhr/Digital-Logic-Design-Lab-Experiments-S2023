@@ -1,4 +1,3 @@
-`timescale 1 ns/ 100 ps
 module counter (input clk,rst,zero,ld,enb, input [2:0] in ,output reg [3:0] out, output  co);
 	always@(posedge clk, posedge rst)begin
 		if(rst == 1'b1)

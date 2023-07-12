@@ -5,13 +5,12 @@ module SequenceDetectorTB();
         wire [3:0] countOut;
         wire serOut, serOutValid;
         
-        SequenceDetector CUT (.clk(clk), .rst(rst), .serIn(serIn), .clkEn(clkEn), .countOut(countOut), .serOut(serOut), .serOutValid(serOutValid));
+        SequenceDetector CUT (.clk(clk), .rst(rst), .serIn(serIn), .clkEn(clkEn), 
+                              .countOut(countOut), .serOut(serOut), .serOutValid(serOutValid));
 
         always #5 clk = ~clk;
 
-        initial begin
-                repeat (100) #5 clkEn = ~clkEn;
-        end
+        initial repeat (100) #5 clkEn = ~clkEn;
 
         initial begin
                 {clk, rst, serIn, clkEn} = 4'b0;

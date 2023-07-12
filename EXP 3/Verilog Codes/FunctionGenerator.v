@@ -1,5 +1,3 @@
-`timescale 1ns/1ns
-
 module FunctionGenerator(clk, SW, AnalogWave);
 	
 	input clk;
