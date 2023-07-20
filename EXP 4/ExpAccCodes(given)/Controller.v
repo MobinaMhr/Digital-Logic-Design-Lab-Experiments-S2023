@@ -1,5 +1,5 @@
-module controller(input clk,rst,start,co,
-		    output reg done, zx,initx,ldx, zt,initt,ldt, zr,initr,ldr, zc,ldc,enc, s);
+module controller(input clk,rst,start,co, output reg done, zx,initx,ldx, 
+				  zt,initt,ldt, zr,initr,ldr, zc,ldc,enc, s);
 
 	reg [2:0] ps, ns;
 	parameter [2:0]
@@ -29,7 +29,6 @@ module controller(input clk,rst,start,co,
 			Idle:begin
 				zx = 1'b1;
 				zt = 1'b1;
-				//zr = 1'b1;
 				zc = 1'b1;
 				done = 1'b1;
 			end

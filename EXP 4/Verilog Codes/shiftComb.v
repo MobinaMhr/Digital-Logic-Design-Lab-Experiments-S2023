@@ -1,4 +1,3 @@
-`timescale 1ns/1ns
 module shiftComb(shiftNumb, dataIn, dataOut);
     input [1:0] shiftNumb;
     input [17:0] dataIn;

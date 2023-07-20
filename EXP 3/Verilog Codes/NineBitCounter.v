@@ -1,12 +1,9 @@
-`timescale 1ns/1ns
-
 module NineBitCounter(clk, rst, ldEn, parIn, cOut, parOut);
 	input clk, rst, ldEn;
 	input [8:0] parIn;
-	output cOut;
-	output [8:0] parOut;
-	reg [8:0] parOut; 
-	reg cOut;
+	output reg cOut;
+	output reg [8:0] parOut;
+
 	always @(posedge clk, posedge rst) begin
 		if(rst) begin
 			parOut = 9'b0;

@@ -1,4 +1,3 @@
--`timescale 1ns/1ns
 module ControlerWrapper(clk, rst, start, engDone, done, wrReq, shEn, ld, engStart, uiRegLd);
     input clk, start, rst, engDone;
     output done, wrReq, shEn, ld, engStart, uiRegLd;
@@ -13,12 +12,10 @@ module ControlerWrapper(clk, rst, start, engDone, done, wrReq, shEn, ld, engStar
     twoBitCounter twobitcounter(.clk(clk), .rst(rst), .cntEn(cntEn), .co(co));
 
     always @(posedge clk, posedge rst) begin
-        if (rst) begin
+        if (rst) 
             ps = Idle;
-        end
-        else begin
+        else 
             ps = ns;
-        end
     end
 
     always @(ps, start, engDone, co) begin

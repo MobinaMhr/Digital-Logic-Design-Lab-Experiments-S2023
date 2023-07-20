@@ -1,9 +1,8 @@
-`timescale 1ns/1ns
-
 module DDS(clk, rst, romSinWave);
 	input clk, rst;
 	output romSinWave;
 	reg [7:0] counter = 8'b0;
+
 	always @(posedge clk) begin
 		if (rst) begin
 			counter = 8'b0;
@@ -12,12 +11,6 @@ module DDS(clk, rst, romSinWave);
 			counter = counter + 1;
 		end
 	end
+	
 	assign romSinWave = counter;
 endmodule
-
-
-
-
-
-
-
